@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño web estilo blog</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="icon" type="image/jpg" sizes="32x32" href="images/sonic.jpg">
+	<link rel="icon" type="image/jpg" sizes="16x16" href="images/sonic.jpg">
+
+    <!-- subtemas h2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@200..700&family=Russo+One&display=swap" rel="stylesheet">
+
+
+<!-- temas principal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Russo+One&display=swap" rel="stylesheet">
+
+
+    <!-- La letra p -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Russo+One&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    
+    
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #fff;
+    
+
+}
+
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100%;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 24px 25px -22px rgb(252, 250, 250);
+    z-index: 2;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;;
+    justify-content: space-between;
+
+}
+
+.logo {
+    height: 80px;
+    display: flex;
+    float: left;
+    color: #fff;
+}
+
+.logo h1 b {
+    color: #060880;
+}
+
+.menu {
+    height: 80px;
+}
+
+.menu nav {
+    height: 100%;
+}
+
+.menu nav ul {
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.menu nav ul li {
+    height: 100%;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu-selec:before {
+    content:'';
+    width: 100%;
+    height: 4px;
+    background: #920e0e;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+   
+    .menu nav ul li a {
+        color: #f8f8f8;
+        font-size: 18px;
+        transition: color 300ms;
+    }
+
+    .menu nav ul li a:hover {
+        color: #0b00a3;
+    }
+
+   .menu .text-menu-selected {
+       color: #726fff;
+    }
+
+    .container-cover {
+
+        width: 100%;
+        height: 500px;
+        position: relative;
+        margin-top: 80px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .container-cover:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(115, 156, 180 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+    }
+
+    .container-info-cover {
+        max-width: 800px;
+        height: 500px;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    
+    }
+
+
+    .container-info-cover h1 {
+        font-family: "Chakra Petch", sans-serif;
+        font-weight: 700%;
+        font-style: normal;
+    }
+    
+    .container-info-cover p {
+        font-family: "Russo One", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .container-content {
+        width: 1200px;
+        margin: auto;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    article {
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    box-shadow: -10px 0 20px -30px black;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    }
+
+    article:before {
+    content: '';
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0205c5;
+    display:flex;
+    }
+
+    article h1 {
+        font-family: "Russo One", sans-serif;
+       font-weight: 400;
+       font-style: normal;
+       font-size: 40px;
+    }
+     article h2 {
+        font-family: "Russo One", sans-serif;
+       font-weight: 400;
+       font-style: normal;
+    }
+
+    article p {
+        font-family: "Chakra Petch", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+     
+    }
+ 
+ article img {
+ width: 100%;
+ margin-top: 20px;
+ background-color: rgb(0, 0, 0);
+    box-shadow: 0 24px 25px -22px rgb(252, 250, 250);
+ }
+
+ article video {
+    display: flex;
+    flex-shrink: 40%;
+    align-self: flex-start;
+ }
+
+
+   
+.container-footer {
+    width: 100%;
+    padding: 40px 0;
+    margin-top: 40px;
+    position: relative;
+}
+
+.container-footer footer {
+max-width: 1200px;
+margin: auto;
+}
+
+.container-footer footer .logo-footer {
+    text-align: center;
+}
+
+.container-footer footer .logo-footer img {
+    width: 50px;
+}
+
+.container-footer footer .redes-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container-footer footer .redes-footer .icon-redes-footer {
+    font-size: 20px;
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+}
+
+    </style>
+</head>
+<body>
+
+    <video id="video-background" autoplay muted loop>
+        <source src="images/2023 FERRARI SF90 Stradale by Carlex Design - Sound, Interior and Exterior.mp4" type="video/mp4">
+    </video>
+
+
+
+    <!-- HEADER-MENU -->
+
+    <header>
+        <div class="header-content">
+          
+            <div class="logo">
+                <h1>Mecanica<b>Automotriz</b></h1>
+            </div>
+
+           <div class="menu">
+
+            <nav>
+                <ul>
+                    <li class="menu-selec"><a href="Tuerca.html" class="text-menu-selected">Inicio</a></li>
+                    <li><a href="https://aprende.com/escuela-oficios/mecanica-automotriz/">Tutorial</a></li>
+                </ul>
+            </nav>
+           </div>
+
+        </div>
+    </header>
+
+<!-- Portada --> <br><br><br><br>
+<div class="container-cover">
+<div class="container-info-cover">
+    <h1>Mecanica Automotriz</h1>
+</div>
+</div>
+
+<br><br><br><br><br>
+<div class="container-content">
+
+    <article>
+
+        <img src="images/motores-coche.jpg" alt="primera generacion" width="450" height="450">
+        <br>
+
+        <h1>Qué es la mecánica automotriz</h1>
+        <p>La mecánica automotriz es una de las ramas de la mecánica que se encarga de estudiar las formas de generación y transmisión del movimiento de un vehículo. 
+        Para lograr este propósito aplica los principios propios de la física y la mecánica para optimizar el proceso de movimiento en todo vehículo motorizado. 
+        Este movimiento o movimientos se generan gracias al diseño de una diversidad de autopartes que conforman la estructura del vehículo. Por ello, 
+        la mecánica automotriz no se concentra en un único componente sino que abarca una diversidad de elementos que funcionan como uno mismo. </p>
+            
+        <img src="images/que-es-la-mecanica-automotriz.jpg" alt="Mecanica" width="450" height="600">
+        <br>
+            <h2>Historia de la mecánica automotriz</h2>
+            <p>Aunque no existe una fecha exacta para determinar el origen de la mecánica automotriz, es cierto que sus principios se han abordado desde tiempos inmemoriales a través de la historia. Primeramente, 
+            en la antigua Grecia, el trabajo de Arquímedes sentó las bases para el desarrollo de la mecánica occidental y su posterior difusión a otras partes del mundo. 
+              Sin embargo, fue Herón de Alejandría, uno de los ingenieros y matemáticos más importantes de la historia, 
+              el responsable de dictaminar las primeras reglas de la mecánica automotriz al crear la primera máquina de vapor. 
+              Posteriormente, el ingeniero chino Ma Jung inventó un carro con diferencial de engranajes usando los anteriores aportes.</p>  
+
+              <img src="images/historia-de-la-mecanica-automotriz.jpg" alt="Historia" width="450" height="600">
+
+              <br>
+                 <h2>Elementos que estudia la mecánica automotriz</h2>
+                 <p> Además de estudiar el proceso para la transmisión y generación del movimiento dentro de un vehículo motorizado, la mecánica automotriz se encarga también de analizar los componentes involucrados en este desarrollo. 
+                 Y es que cuando hablamos de mecánica automotriz no solo nos referimos al estudio del motor, el corazón y protagonista de todo vehículo, también hablamos de una serie de componentes que sin ellos, no podría funcionar un coche. 
+                Vuélvete un profesional en este campo con nuestro Curso de Mecánica Automotriz. Regístrate y empieza a emprender. </p>
+
+                <br>
+<h2>Motor</h2>
+<p>No puede existir vehículo motorizado sin la presencia de un motor. Este elemento es el encargado de hacer funcionar el sistema completo de una unidad gracias a la transformación de algún tipo de energía, 
+electricidad, combustibles, entre otros, en energía mecánica. Es en pocas palabras, el responsable de producir todo el movimiento. </p>
+
+<br>
+    <h2>Árbol de levas </h2>
+    <p>Recibe su nombre por su estructura formada por un eje y una diversidad de levas que tienen como función activar diversos mecanismos como las válvulas.
+     En motores de combustión interna, buscan facilitar la salida e ingreso de los gases en los diversos cilindros del vehículo. </p>
+
+     <br>
+        <h2>Cigüeñal </h2>
+        <p>Es la parte más grande y pesada del motor de un auto que sirve para convertir el movimiento alternativo de un pistón en 
+        un movimiento giratorio. A través de su eje giratorio busca crear una sucesión de movimientos que finalicen con el desplazamiento 
+        del vehículo. 
+
+        </p>
+
+<img src="images/elementos-principales-que-estudia-la-mecanica-automotriz-infografia.jpg" alt="Cigüeñal" width="450" height="600">
+
+        <h2>Correa de distribución </h2>
+        <p>Es el medio por el cual se sincroniza la rotación del cigüeñal y el árbol de levas. Su objetivo principal es permitir el cierre y apertura de las válvulas 
+        del motor durante el proceso de admisión y escape de cada cilindro. Es una pieza que debe sustituirse con el tiempo debido al desgaste. </p>
+
+        <br>
+
+        <h2>Importancia de la mecánica automotriz</h2>
+        <p>En términos sencillos y generales, se podría colocar a la mecánica automotriz como la disciplina encargada de reparar imperfecciones en el motor de un vehículo. Pero lo cierto es que esta rama de la mecánica va mucho más allá de una simple corrección. Se puede aplicar en la manutención y optimización de una amplia variedad de motores.<br>
+            De igual manera, tiene un importante papel al momento de evaluar y poner en acción la diversidad de avances tecnológicos. La mecánica automotriz destaca también por su capacidad de prevención, ya que además de reparar todo tipo de mecanismos orientados al movimiento de un coche, es capaz de detectar toda carencia de mantenimiento y falla. </p>
+
+            <br>
+        <h2>Qué hace un mecánico automotriz</h2>
+        <p>Un profesional de la mecánica automotriz no solo se encarga de hacer las reparaciones correspondientes a uno o 
+        más elementos involucrados en la generación de movimiento de un coche, también aplica sus conocimientos y habilidades en otro 
+        tipo de funciones igual de importantes que la primera. </p>
+
+        <br>
+            <p>■ Elaborar un presupuesto que cubra las reparaciones y el trabajo aplicado.
+            </p> 
+            <p>■ Realizar el diagnóstico del estado del vehículo. 
+            </p>
+            <p>■ Desmontar las partes del motor y otros elementos para su reparación. 
+            </p>
+            <p>■ Reemplazar las partes dañadas de forma óptima y segura. 
+            </p>
+            <p>■ Ensamblar el motor y otras partes para realizar pruebas. 
+            </p>
+            <p>■ Orientar al cliente respecto al correcto funcionamiento del vehículo. 
+            </p>
+    
+            <br>
+
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/R_U9sqwflzc?si=ZRyZMVsjn-I7o6lQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+       
+
+</article>
+
+ </div>
+
+
+<div class="container-footer">
+    <footer>
+        <div class="logo-footer">
+    <img src="images/logodefinitivo.jpg" alt="imagen de control">
+        </div>
+    
+        <div class="redes-footer">
+        <a href="#"><i class="fa-brands fa-facebook icon-redes-footer"></i></a>
+         <a href="#"><i class="fa-brands fa-instagram icon-redes-footer"></i></a>
+        </div>
+    
+        <hr>
+        <h5>© Axel Leonardo Martinez Ramirez - Todos los Derechos Reservados</h5>
+    
+        
+    </footer>
+    </div>
+</body>
+</html>
